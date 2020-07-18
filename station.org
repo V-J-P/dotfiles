@@ -1,0 +1,8 @@
+* nvidia-settings
+  persistent nvidia-settings file location:
+  .xorg.conf
+* color palette
+* used fonts
+** SourceCodePro
+  + EMacs
+

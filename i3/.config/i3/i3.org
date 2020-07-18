@@ -1,0 +1,49 @@
+* Goal
+minimalist usable workflow eyecandy
+* Keys
+** Basics
+[[file:config::set $mod Mod4][$mod]] - Super (Mod4)
+[[file:config::set $left h][ < ]] - h
+[[file:config::set $down j][ v ]] - j
+[[file:config::set $up k][ ^ ]] - k
+[[file:config::set $right l][ > ]] - l
+[[file:config::restart i3 inplace (preserves your layout/session, can be used to upgrade i3)][restart i3]] - Super+Shift+r
+[[file:config::reload the configuration file][reload configuration file]] - Super+Shift+c
+[[file:config::exit i3 (logs you out of your X session)][Exit i3]] - Super+Shift+e
+[[file:config::Mousebehavior][Mousebehavior]]
+
+** Window manipulation
+[[file:config::kill focused window][Kill Focused Window]] - Super+Shift+q
+[[file:config::change focus][Change Focus]] - Super+Movement
+[[file:config::move focused window][Move Focused Window]] - Super+Shift+Movement
+[[file:config::resize window (you can also use the mouse for that)][Window Resize]] - Super+r
+** Apps to start
+[[file:config::bindsym $mod+Return exec i3-sensible-terminal][Terminal]] - Super+Return
+[[file:config::bindsym $mod+d exec dmenu_run][dmenu]] - Super+d
+
+** Workspace manipulation
+[[file:config::set $ws1 "1"][Workspace Name Var definitions]]
+[[file:config::bindsym $mod+1 workspace $ws1][Switch to Workspace bindings]]
+[[file:config::bindsym $mod+Shift+1 move container to workspace $ws1][Move Container to Workspace]]
+[[file:config::move focused container to workspace and focus][Move Container to Workspace and focus]]
+[[file:config::bindsym $mod+i move container to output right; focus output right][Cycle Container to the Next Output]]
+[[file:config::bindsym $mod+Shift+i move workspace to output right][Cycle Workspace to the Next Output]]
+[[file:config::bindsym $mod+o focus output right][Cycle Focus Between Outputs]]
+
+** Screen-/Tilingmodes
+[[file:config::Fullscreen Mode][Fullscreen mode]]
+** DONE Volume Control
+CLOSED: [2020-03-26 Thu 15:09]
+* Style
+** Fonts
+[[file:config::font for window][Titlebars]]
+** Colorpalette
+[[file:config::set $act1][Var Table]]
+[[file:config::client.focused][Client Window Styles]] 
+* i3Bar
+** Primary
+[[file:config::Bar primary/mid][Primary/Mid Bar]]
+** Right
+[[file:config::Bar right][Right Bar]]
+** TODO Mousecontrol
+** TODO Add Title of currently focused Client via IPC Socket
