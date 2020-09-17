@@ -1,0 +1,115 @@
+!! Colorpalette
+
+#define S_act1          #222226
+#define S_act2          #5d4d7a
+#define S_base          #b2b2b2
+#define S_base_dim      #686868
+#define S_bg1           #292b2e
+#define S_bg2           #212026
+#define S_bg3           #100a14
+#define S_bg4           #0a0814
+#define S_border        #5d4d7a
+#define S_cblk          #cbc1d5
+#define S_cblk_bg       #2f2b33
+#define S_cblk_ln       #827591
+#define S_cblk_ln_bg    #373040
+#define S_cursor        #e3dedd
+#define S_const         #a45bad
+#define S_comment       #2aa1ae
+#define S_comment_light #2aa1ae
+#define S_comment_bg    #292e34
+#define S_comp          #c56ec3
+#define S_err           #e0211d
+#define S_func          #bc6ec5
+#define S_head1         #4f97d7
+#define S_head1_bg      #293239
+#define S_head2         #2d9574
+#define S_head2_bg      #293235
+#define S_head3         #67b11d
+#define S_head3_bg      #293235
+#define S_head4         #b1951d
+#define S_head4_bg      #32322c
+#define S_highlight     #444155
+#define S_highlight_dim #3b314d
+#define S_keyword       #4f97d7
+#define S_lnum          #44505c
+#define S_mat           #86dc2f
+#define S_meta          #9f8766
+#define S_str           #2d9574
+#define S_suc           #86dc2f
+#define S_ttip          #9a9aba
+#define S_ttip_sl       #5e5079
+#define S_ttip_bg       #34323e
+#define S_type          #ce537a
+#define S_var           #7590db
+#define S_war           #dc752f
+
+
+#define S_aqua          #2d9574
+#define S_aqua_bg       #293235
+#define S_green         #67b11d
+#define S_green_bg      #293235
+#define S_green_bg_s    #29422d
+#define S_cyan          #28def0
+#define S_red           #f2241f
+#define S_red_bg        #3c2a2c
+#define S_red_bg_s      #512e31
+#define S_blue          #4f97d7
+#define S_blue_bg       #293239
+#define S_blue_bg_s     #2d4252
+#define S_magenta       #a31db1
+#define S_yellow        #b1951d
+#define S_yellow_bg     #32322c
+
+
+
+
+!! URxvt Settings
+URxvt*scrollBar:                      0
+
+!! Font
+URxvt*font:                           xft:Source Code Pro:size=14
+
+
+!! Colors
+URxvt*background:                     S_bg1
+URxvt*foreground:                     S_base
+!! black
+URxvt*color0:                         S_bg2
+URxvt*color8:                         S_bg3
+!! red
+URxvt*color1:                         S_func
+URxvt*color9:                         S_const
+!! green
+URxvt*color2:                         S_head3
+URxvt*color10:                        S_mat
+!! yellow
+URxvt*color3:                         S_head4
+URxvt*color11:                        S_meta
+!! blue
+URxvt*color4:                         S_var
+URxvt*color12:                        S_comment
+!! magenta
+URxvt*color5:                         S_type
+URxvt*color13:                        S_cblk_ln
+!! cyan
+URxvt*color6:                         S_str
+URxvt*color14:                        S_lnk
+!! white
+URxvt*color7:                         #cccccc
+URxvt*color15:                        S_base
+
+!URxvt*colorBD:                        color
+!URxvt*colorIT:                        color
+!URxvt*colorUL:                        color
+!URxvt*colorRV:                        color
+!URxvt*underlineColor:                 color
+!URxvt*scrollColor:                    color
+!URxvt*troughColor:                    color
+!URxvt*highlightColor:                 color
+!URxvt*highlightTextColor:             color
+!URxvt*cursorColor:                    color
+!URxvt*cursorColor2:                   color
+!URxvt*pointerColor:                   color
+!URxvt*pointerColor2:                  color
+!URxvt*borderColor:                    color

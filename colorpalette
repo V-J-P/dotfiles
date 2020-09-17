@@ -41,3 +41,19 @@ set $ttip-bg       #34323e
 set $type          #ce537a
 set $var           #7590db
 set $war           #dc752f
+
+set $aqua          #2d9574
+set $aqua-bg       #293235
+set $green         #67b11d
+set $green-bg      #293235
+set $green-bg-s    #29422d
+set $cyan          #28def0
+set $red           #f2241f
+set $red-bg        #3c2a2c
+set $red-bg-s      #512e31
+set $blue          #4f97d7
+set $blue-bg       #293239
+set $blue-bg-s     #2d4252
+set $magenta       #a31db1
+set $yellow        #b1951d
+set $yellow-bg     #32322c
