@@ -32,29 +32,79 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(systemd
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
-     better-defaults
-     emacs-lisp
-     git
-     helm
-     lsp
-     markdown
-     multiple-cursors
-     org
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+
+     ;; 3. Checkers
      spell-checking
      syntax-checking
+     ;; 4. Completion
+     auto-completion
+     helm
+     ;; 5. E-mail
+     ;; 6. Emacs
+     better-defaults
+     helpful
+     ibuffer
+     org
+     ;; 7. Filetree
+     treemacs
+     ;; 8. Fonts
+     ;; 9. Fun
+     emoji
+     ;; 10. Internationalization
+     ;; 11. Miscellaneous
+     spacemacs-completion
+     spacemacs-defaults
+     spacemacs-editing
+     spacemacs-editing-visual
+     spacemacs-evil
+     spacemacs-modeline
+     spacemacs-navigation
+     spacemacs-org
+     spacemacs-project
+     spacemacs-purpose
+     spacemacs-visual
+     ;; 12. Music
+     ;; 13. Operating Systems
+     ;; 14. Pair Programming
+     ;; 15. Programming Languages
+     ;; 15.1 Domain-specific (DSLs)
+     emacs-lisp
+     ;; 15.1.2 Markup & configuration
+     html
+     json
+     markdown
+     ;; 15.1.3 Scripting
+     shell-scripts
+     ;; 15.2 Frameworks
+     ;; 15.2.4 React
+     react
+     ;; 15.2.6
+     vue
+     ;; 15.3 General-purpose
+     ;; 15.3.2 Multi-paradigm
+     javascript
+     ;; 16. Readers
+     ;; 17. Source control
+     git
+     github
      version-control
-     treemacs)
-
+     ;; 18. Spacemacs
+     ;; 19. Tagging
+     ;; 20. Themes
+     ;; 21. Tools
+     import-js
+     lsp
+     ;; pass
+     systemd
+     ;; 22. Vim
+     ;; 23. Web services
+     )
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -522,7 +572,10 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files '("~/org/notes.org" "~/org/gifts.org")))
+ '(evil-want-Y-yank-to-eol nil)
+ '(org-agenda-files '("~/org/notes.org" "~/org/gifts.org"))
+ '(package-selected-packages
+   '(web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data add-node-modules-path yasnippet-snippets xterm-color ws-butler writeroom-mode winum which-key vterm volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil toc-org terminal-here systemd symon symbol-overlay string-inflection spaceline-all-the-icons smeargle shell-pop restart-emacs rainbow-delimiters popwin pcre2el password-generator paradox overseer orgit org-superstar org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file nameless mwim multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lsp-ui lsp-treemacs lorem-ipsum link-hint indent-guide hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-ls-git helm-gitignore helm-git-grep helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ gh-md fuzzy font-lock+ flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr elisp-slime-nav editorconfig dumb-jump dotenv-mode diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode browse-at-remote auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -167,6 +167,23 @@ bindsym $mod+F9 reload
 bindsym $mod+F10 restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+F11 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# Set shut down, restart and locking features
+bindsym $mod+F12 mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+ 
 
 ## Volume Control
 ## Speaker
@@ -320,6 +337,20 @@ bar {
                #binding_mode
         }
 }
+
+## Autostart
+#exec  --no-startup-id nvidia-settings -l --config=~./xorg.conf
+## Dispaly
+exec  --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 144.00 --auto --primary; xrandr --output DVI-D-0 --auto --right-of DP-4
+
+## Tray
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id manjaro-hello
+exec --no-startup-id nm-applet
+exec --no-startup-id pamac-tray
+exec --no-startup-id clipit
+exec --no-startup-id pa-applet
+
 #
 ## Apps
 ### Terminal
@@ -331,7 +362,3 @@ bar {
 #
 ### Chrome
 #bindsym $mod+F3 [class=""] focus
-## Startup
-#
-#exec  --no-startup-id nvidia-settings -l --config=~./xorg.conf
-exec  --no-startup-id xrandr --output DP-4 --auto --primary; xrandr --output DVI-D-0 --auto --right-of DP-4
